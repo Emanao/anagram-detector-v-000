@@ -7,9 +7,9 @@ class Anagram
   end
   def match (anagram_array)
     result= []
-    word_chars = word.trim.split(//).sort
+    word_chars = word.strip.split(//).sort
     anagram_array.each do |anagram|
-      anagram_chars = anagram.trim.split(//).sort
+      anagram_chars = anagram.strip.split(//).sort
       result <<anagram if word_chars == anagram_chars
     end
     result
