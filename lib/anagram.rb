@@ -15,6 +15,6 @@ class Anagram
     anagram_array.find do |anagram|
       anagram.strip.split(//).sort == word_chars
     end
-    result
+    #result
   end
 end
