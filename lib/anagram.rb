@@ -14,7 +14,7 @@ class Anagram
     # end
     anagram_array.select {|anagram|
       anagram.strip.split(//).sort == word_chars
-    }.first
+    }
     #result
   end
 end
