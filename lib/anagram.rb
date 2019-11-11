@@ -12,9 +12,9 @@ class Anagram
     #   anagram_chars = anagram.strip.split(//).sort
     #   result <<anagram if word_chars == anagram_chars
     # end
-    anagram_array.find do |anagram|
+    anagram_array.select {|anagram|
       anagram.strip.split(//).sort == word_chars
-    end
+    }
     #result
   end
 end
