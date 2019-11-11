@@ -8,9 +8,12 @@ class Anagram
   def match (anagram_array)
     result= []
     word_chars = word.strip.split(//).sort
-    anagram_array.each do |anagram|
-      anagram_chars = anagram.strip.split(//).sort
-      result <<anagram if word_chars == anagram_chars
+    # anagram_array.each do |anagram|
+    #   anagram_chars = anagram.strip.split(//).sort
+    #   result <<anagram if word_chars == anagram_chars
+    # end
+    anagram_array.find do |anagram|
+      anagram.strip.split(//).sort == word_chars
     end
     result
   end
